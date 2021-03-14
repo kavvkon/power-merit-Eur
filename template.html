@@ -1,0 +1,130 @@
+{% extends base %}
+
+<!-- goes in body -->
+{% block postamble %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+{% endblock %}
+
+<!-- goes in body -->
+{% block contents %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Merit order in Europe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse sticky-top navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/kavvkon/power-merit-Eur">Source code</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm my-4">
+      <div class="accordion-group" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left py-0" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Usage
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+            <div class="card-body">
+              Select one or more countries to plot the merit order (supply curve) of the respective
+              power plants.
+              To select many countries Ctrl+click. Fuel prices can be changed in the "Fuel priced tab". The power
+              price is defined by the intersection of the supply curve and the demand
+              curve. For reference, the range of the demand value is illustrated by the grey transparent box
+              corresponds to
+              the range of demand observed (2 and 98 percentile of 2017). This is available for single countries
+              selections.<br /> The carbon price be modified using the slider. Use this to explore fuel
+              switching effects, e.g. by raising the carbon tax, gas comes before coal.<br />
+              By selecting "Average day" the capacity multiplied by the respective capacity factor is plotted,
+              as a proxy to the capacity that is online on an average day. This affects mainly the variable renewable
+              power plants.<br />
+              Change Tabs to see an interactive power plant map and a detailed or aggregated list of the selected
+              power plants.
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left py-0" type="button" data-toggle="collapse"
+                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Sources and assumptions
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+            <div class="card-body">
+              The power plant list is based on the open <a
+                href="https://ec.europa.eu/jrc/en/publication/joint-research-centre-power-plant-database-jrc-ppdb">JRC
+                power
+                plant database (2019)</a> and on realistic fuel price assumptions based on various sources. The
+              estimations do not include imports/exports and intermittency. The marginal cost of each power plant is the
+              ratio of
+              the fuel price and efficiency, ignoring any other markup costs. The efficiencies are coming directly from
+              JRC-PPDB, please read the report for more details on how they are estimated.
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left py-0 collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Software used (open source)
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+            <div class="card-body">
+              <ul>
+                <li> <a href=https://panel.holoviz.org />Holoviz Panel</a> for dashboarding widgets and interactive
+                  plotting and serving</li>
+                <li> <a href=https://altair-viz.github.io/ />Altair</a> for interactive non-rendered plots</li>
+                <li> <a href=https://github.com/python-visualization/folium />Folium</a> for mapping (with <a
+                    href=https://stamen.com />Stamen</a> Toner basemap) </li>
+                <li> <a href=https://getbootstrap.com />Bootstrap</a> for HTML formatting and templating</li>
+                <li> Standard <a href=https://www.python.org>Python</a> scientific stack for data wrangling (numpy, <a
+                    href=https://pandas.pydata.org />pandas</a>, etc) </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      {{ embed(roots.A) }}
+    </div>
+  </div>
+
+  <div class="card-footer text-muted">
+    <i>Developed by <a href="http://kavvadias.eu">Kavvadias Konstantinos</a>, 2021.</i>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+
+  {% endblock %}

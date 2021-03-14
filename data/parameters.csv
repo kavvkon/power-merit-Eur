@@ -1,0 +1,21 @@
+type_g,Cost (EUR/Mwh),Emissions (gr/kWh),Capacity Factor
+Biomass,30.0,0,.95
+Fossil Brown coal/Lignite,8.0,363.6,.95
+Fossil Coal-derived gas,35.0,158.4,.95
+Fossil Gas,25.0,201.6,.95
+Fossil Hard coal,15.0,385.2,.95
+Fossil Oil,50.0,0,.9
+Fossil Oil shale,55.0,385.2,.9
+Fossil Peat,25.0,381.6,.9
+Geothermal,10.0,0,.9
+Hydro,2.0,0,.8
+Hydro Pumped Storage,2.0,0,.5
+Hydro Run-of-river and poundage,2.0,0,.3
+Hydro Water Reservoir,2.0,0,.8
+Marine,3.0,0,.9
+Nuclear,5.0,0,.9
+Other,100.0,0,.9
+Solar,1.0,0,.12
+Waste,5.0,0,.9
+Wind Offshore,3.0,0,.25
+Wind Onshore,2.0,0,.35
