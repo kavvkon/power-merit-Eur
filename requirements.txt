@@ -3,3 +3,4 @@ numpy
 pandas
 folium
 altair
+param
