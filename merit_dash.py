@@ -43,7 +43,7 @@ class Merit_dash(param.Parameterized):
         ["Greece"], objects=(sorted(df1["country"].unique()))  # , height_policy="max"
     )
 
-    carbon_price = param.Number(0, bounds=(0, 100))
+    carbon_price = param.Number(0, bounds=(0, 175))
     toggle_operation = param.ObjectSelector(
         default="Full capacity", objects=["Full capacity", "Average day"]
     )
@@ -55,7 +55,7 @@ class Merit_dash(param.Parameterized):
     par_price_dict_default = {}
     for ind, par in df_params.iterrows():
         par_price_dict_default[ind] = par["Cost (EUR/Mwh)"]
-        par_price_dict[ind] = param.Number(par["Cost (EUR/Mwh)"], bounds=(0, 100))
+        par_price_dict[ind] = param.Number(par["Cost (EUR/Mwh)"], bounds=(0, 200))
     # Assign to variables so that params are properly embedded in object
     # https://stackoverflow.com/questions/18090672/convert-dictionary-entries-into-variables-python
     locals().update(par_price_dict)
