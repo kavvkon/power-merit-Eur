@@ -5108,14 +5108,8 @@ capacity_g,country,eff,lat,lon,name_g,type_g
 470.0,Czechia ,0.3,48.847,17.12,EDUK_B3____,Nuclear
 1029.0,Czechia ,0.3,49.178,14.375,ETEM_G1____,Nuclear
 1027.0,Czechia ,0.3,49.178,14.375,ETEM_G2____,Nuclear
-1288.0,Germany,0.3,48.515,10.402,Gundremmingen C,Nuclear
-1284.0,Germany,0.3,48.515,10.402,Gundremmingen B,Nuclear
-1275.0,Germany,0.3,49.984,10.181,Grafenrheinfeld,Nuclear
-1360.0,Germany,0.3,52.036,9.414,Grohnde,Nuclear
-1410.0,Germany,0.3,53.851,9.345,Brokdorf,Nuclear
 1410.0,Germany,0.3,48.629,12.33,Isar 2,Nuclear
 1320.0,Germany,0.3,49.041,9.175,KKW Neckarwestheim 2,Nuclear
-1402.0,Germany,0.3,49.253,8.436,KKW Philippsburg 2,Nuclear
 1063.9,Spain,0.3,39.213,-1.051,COFRENTES,Nuclear
 1003.4,Spain,0.3,40.702,-2.623,TRILLO,Nuclear
 455.2,Spain,0.3,42.774,-3.207,S.M.GAROÑA,Nuclear
