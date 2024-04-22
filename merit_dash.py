@@ -191,7 +191,8 @@ class Merit_dash(param.Parameterized):
         # initialize the Folium map
         m = folium.Map(
             location=[data["lat"].mean(), data["lon"].mean()],
-            tiles="Stamen TonerBackground",
+            tiles="https://tiles.stadiamaps.com/tiles/stamen_toner_background/{z}/{x}/{y}{r}.png",
+	        attr= r'&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             zoom_start=6,  # ='Cartodb Positron'
         )
         # add heat map
@@ -224,7 +225,7 @@ class Merit_dash(param.Parameterized):
         # return a figure with a set width/height
         figure = folium.Figure(width=700, height=700)
         m.add_to(figure)
-        return pn.Pane(figure)
+        return pn.panel(figure)
 
     @param.depends("countries", "toggle_aggregate_by_type")
     def capacities(self):

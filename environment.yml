@@ -1,0 +1,11 @@
+name: panel
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - altair=5.3.0
+  - folium=0.16.0
+  - pandas=2.2.2
+  - panel=1.4.1
+  - param=2.1.0
+  - python=3.11
